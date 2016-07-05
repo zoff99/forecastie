@@ -59,7 +59,7 @@ dependencies:
     - git submodule init
     - git submodule update
 #    - gradle build --stacktrace --info
-    - gradle assembleDebug --info --stacktrace --parallel;
+    - ./gradlew assembleDebug --info --stacktrace --parallel;
     - find . -name '*.apk' ; exit 0
 
 
