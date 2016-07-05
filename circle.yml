@@ -71,13 +71,11 @@ dependencies:
     - cp /home/ubuntu/forecastie/app/build/outputs/lint-results-debug.xml $CIRCLE_ARTIFACTS/ ;  exit 0
 #   --- save lint output ---
 
+#   --- find test results ---
     - ls -al app/build/test-results/debug/ ; exit 0
     - mkdir -p $CIRCLE_ARTIFACTS/tests/ ;  exit 0
     - cp -v app/build/test-results/debug/* $CIRCLE_ARTIFACTS/tests/ ;  exit 0
-
-
-
-
+#   --- find test results ---
 
     - mkdir -p app/build/outputs/apk/
     - cp -v `find ./build/outputs/apk/ -name '*.apk' 2> /dev/null | tail -1 2> /dev/null` app/build/outputs/apk/app-debug-unaligned.apk ; exit 0
